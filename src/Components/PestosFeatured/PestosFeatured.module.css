@@ -1,0 +1,244 @@
+/* Background and Container */
+.container {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: #000;
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+   background: url('../PestosFeatured/Mask_group.webp') no-repeat center center;
+    background-size: cover;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  padding: 60px 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Title */
+.title {
+  font-size: 56px;
+  font-weight: 900;
+  color: #fff;
+  text-align: center;
+  margin-bottom: 60px;
+  letter-spacing: 0px;
+  font-family: 'Arial Black', sans-serif;
+}
+
+/* Menu Grid */
+.menuGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  margin-top: 40px;
+}
+
+/* Section */
+.section {
+  display: flex;
+  flex-direction: column;
+}
+
+.sectionTitle {
+  font-size: 44px;
+  font-weight: 900;
+  color: #FFA500;
+  margin-bottom: 30px;
+  letter-spacing: 2px;
+  font-family: 'Arial Black', sans-serif;
+  text-transform: capitalize;
+}
+
+/* Items List */
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+/* Menu Item */
+.menuItem {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  padding: 18px 0;
+  border-bottom: 1px dotted #555;
+  transition: transform 0.3s ease;
+}
+
+.menuItem:hover {
+  transform: translateX(5px);
+}
+
+.menuItem:last-child {
+  border-bottom: none;
+}
+
+/* Item Image */
+.itemImage {
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  object-fit: cover;
+  flex-shrink: 0;
+  border: 2px solid #FFA500;
+}
+
+/* Item Details */
+.itemDetails {
+  flex: 1;
+  min-width: 0;
+}
+
+.itemName {
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+  margin: 0;
+  margin-bottom: 6px;
+  font-family: 'Arial', sans-serif;
+}
+
+.itemDesc {
+  font-size: 12px;
+  color: #bbb;
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  line-height: 1.4;
+}
+
+/* Item Price */
+.itemPrice {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 4px;
+  flex-shrink: 0;
+}
+
+.price {
+  font-size: 20px;
+  font-weight: 700;
+  color: #FFA500;
+  font-family: 'Arial', sans-serif;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .menuGrid {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .title {
+    font-size: 44px;
+    margin-bottom: 40px;
+  }
+
+  .sectionTitle {
+    font-size: 36px;
+    margin-bottom: 25px;
+  }
+
+  .content {
+    padding: 40px 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    padding: 30px 20px;
+  }
+
+  .title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .sectionTitle {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  .menuItem {
+    gap: 15px;
+    padding: 15px 0;
+  }
+
+  .itemImage {
+    width: 70px;
+    height: 70px;
+  }
+
+  .itemName {
+    font-size: 16px;
+  }
+
+  .itemDesc {
+    font-size: 11px;
+  }
+
+  .price {
+    font-size: 18px;
+  }
+
+  .menuGrid {
+    gap: 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .content {
+    padding: 20px 15px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 25px;
+  }
+
+  .sectionTitle {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .menuGrid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .menuItem {
+    gap: 10px;
+    padding: 12px 0;
+  }
+
+  .itemImage {
+    width: 60px;
+    height: 60px;
+  }
+
+  .itemName {
+    font-size: 14px;
+  }
+
+  .itemDesc {
+    font-size: 10px;
+  }
+
+  .price {
+    font-size: 16px;
+  }
+}

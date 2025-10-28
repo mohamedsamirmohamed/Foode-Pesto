@@ -1,0 +1,439 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: 'Montserrat', sans-serif; /* Changed font to match image's aesthetic */
+}
+
+.mainTitle {
+  text-align: center;
+  font-size: 3.5em; /* Adjusted for visual hierarchy */
+  font-weight: 700;
+  color: #7b3f00; /* Darker brown for the title */
+  margin-bottom: 70px;
+  letter-spacing: 1px;
+  position: relative;
+  font-family: 'Playfair Display', serif; /* A more elegant font for the title */
+}
+
+/* Subtle underline effect for the title, if desired, remove if not needed */
+.mainTitle::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  bottom: -20px;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background-color: #b07d57;
+  border-radius: 2px;
+}
+
+
+/* Top Section - Featured Chefs */
+.topSection {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  margin-bottom: 70px;
+}
+
+.topChefCard {
+  display: flex;
+  background-color: white;
+  border-radius: 10px; /* Slightly less rounded corners */
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08); /* Softer, wider shadow */
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.topChefCard:hover {
+  transform: translateY(-8px); /* More pronounced lift on hover */
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+.topChefImage img { /* Added img selector for actual image */
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures image covers the area without distortion */
+  display: block;
+}
+
+.topChefImage {
+  width: 45%; /* Adjusted width for image */
+  min-height: 280px; /* Increased min-height */
+  background: linear-gradient(135deg, #a88d75 0%, #7a5e4d 100%); /* Placeholder gradient, will be covered by img */
+}
+
+.topChefContent {
+  width: 55%; /* Adjusted width for content */
+  padding: 35px; /* More padding */
+  background-color: #fefcfb; /* Very light, warm background */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative; /* Needed for the subtle pattern */
+}
+
+/* Subtle texture/pattern for the content area */
+.topChefContent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('data:image/svg+xml;utf8,<svg width="100" height="100" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg"><path d="M0 0h100v100H0z" fill="rgba(240,230,220,0.1)"/><path d="M0 0h50v50H0zM50 50h50v50H50z" fill="rgba(255,255,255,0.05)"/></svg>');
+  background-size: 20px 20px;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+
+.topChefName {
+  font-size: 1.8em; /* Larger name */
+  font-weight: 600;
+  color: #7b3f00; /* Consistent dark brown */
+  margin: 0 0 8px 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.topChefTitle {
+  font-size: 0.85em; /* Slightly larger title */
+  font-weight: 700;
+  color: #b07d57; /* Warm, medium brown */
+  letter-spacing: 1.5px;
+  text-transform: uppercase; /* Uppercase for titles */
+  margin: 0 0 20px 0;
+}
+
+.topChefDescription {
+  font-size: 1.0em;
+  color: #5c4b3f; /* Softer text color */
+  line-height: 1.7;
+  margin: 0;
+}
+
+/* Bottom Section - Grid Chefs */
+.bottomSection {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px; /* Slightly increased gap */
+}
+
+.chefCard {
+  background-color: white;
+  border: none; /* Removed border */
+  border-radius: 10px; /* Consistent border radius */
+  padding: 25px; /* More padding */
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06); /* Softer initial shadow */
+  display: flex; /* Use flex for internal layout */
+  flex-direction: column;
+  justify-content: space-between; /* Pushes social icons to the bottom */
+}
+
+.chefCard:hover {
+  transform: translateY(-5px); /* Moderate lift on hover */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+}
+
+.chefImage {
+  width: 120px; /* Fixed width for circular image */
+  height: 120px; /* Fixed height for circular image */
+  border-radius: 50%; /* Makes image circular */
+  overflow: hidden; /* Hides parts of image outside circle */
+  margin: 0 auto 20px auto; /* Centered, more margin below */
+  border: 4px solid #f0e6dd; /* Light border around circular image */
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(45deg, #d3bba8 0%, #b0998a 100%); /* Placeholder gradient */
+}
+
+.chefImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.chefName {
+  font-size: 1.25em; /* Larger name */
+  font-weight: 600;
+  color: #7b3f00;
+  margin: 0 0 5px 0;
+  font-family: 'Playfair Display', serif;
+}
+
+.chefRole {
+  font-size: 0.8em; /* Slightly smaller role text */
+  font-weight: 700;
+  color: #b07d57;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin: 0 0 15px 0;
+}
+
+.chefDescription {
+  font-size: 0.9em;
+  color: #5c4b3f;
+  line-height: 1.6;
+  margin: 0 0 25px 0; /* More margin above social icons */
+  flex-grow: 1; /* Allows description to take up available space */
+}
+
+.socialIcons {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* Increased gap between icons */
+  margin-top: auto; /* Pushes icons to the bottom */
+}
+
+.iconLink {
+  width: 38px; /* Larger clickable area */
+  height: 38px; /* Larger clickable area */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #b07d57; /* Icon color */
+  font-size: 1.2em; /* Larger icon size */
+  transition: all 0.3s ease;
+  text-decoration: none;
+  border-radius: 50%; /* Circular background */
+  background-color: #f5ede6; /* Light background for icons */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+}
+
+.iconLink:hover {
+  color: white; /* White icon on hover */
+  background-color: #7b3f00; /* Dark brown background on hover */
+  transform: translateY(-2px) scale(1.05); /* Slight lift and scale */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .topSection {
+    grid-template-columns: 1fr; /* Single column for top chefs on medium screens */
+  }
+  
+  .bottomSection {
+    grid-template-columns: repeat(2, 1fr); /* Two columns for bottom chefs on medium screens */
+  }
+
+  .topChefImage {
+    min-height: 250px; /* Adjust height for smaller screens */
+  }
+}
+
+@media (max-width: 768px) {
+  .mainTitle {
+    font-size: 2.8em;
+    margin-bottom: 50px;
+  }
+  
+  .topChefCard {
+    flex-direction: column; /* Stack image and content on small screens */
+  }
+  
+  .topChefImage {
+    width: 100%; /* Full width for image */
+    height: 220px; /* Fixed height */
+    min-height: unset; /* Remove min-height override */
+  }
+  
+  .topChefContent {
+    width: 100%; /* Full width for content */
+    padding: 25px; /* Adjust padding */
+  }
+
+  .topChefName {
+    font-size: 1.5em;
+  }
+  
+  .topChefTitle {
+    font-size: 0.8em;
+  }
+  
+  .topChefDescription {
+    font-size: 0.95em;
+  }
+
+  .bottomSection {
+    grid-template-columns: 1fr; /* Single column for all chefs on small screens */
+  }
+
+  .chefCard {
+    padding: 20px; /* Adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .mainTitle {
+    font-size: 2.2em;
+    margin-bottom: 30px;
+  }
+  .mainTitle::after {
+    bottom: -15px;
+    width: 60px;
+  }
+
+  .topChefContent {
+    padding: 20px;
+  }
+
+  .topChefName {
+    font-size: 1.3em;
+  }
+  .topChefTitle {
+    font-size: 0.75em;
+  }
+  .topChefDescription {
+    font-size: 0.9em;
+  }
+
+  .chefImage {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+  }
+  .chefName {
+    font-size: 1.1em;
+  }
+  .chefRole {
+    font-size: 0.75em;
+  }
+  .chefDescription {
+    font-size: 0.85em;
+  }
+  .socialIcons {
+    gap: 10px;
+  }
+  .iconLink {
+    width: 35px;
+    height: 35px;
+    font-size: 1.1em;
+  }
+}
+
+.scrollContainer {
+  width: 100%;
+  overflow: hidden;
+  padding: 20px 0;
+  position: relative;
+}
+
+.scrollText {
+  display: flex;
+  animation: scroll-right-to-left 8s linear infinite;
+  white-space: nowrap;
+}
+
+.scrollText span {
+  font-size: 3.5em;
+  font-weight: 700;
+  color: #7b3f00;
+  margin: 0 60px;
+  font-family: 'Playfair Display', serif;
+  letter-spacing: 2px;
+}
+
+@keyframes scroll-right-to-left {
+  0% {
+    transform: translateX(100vw);
+  }
+  100% {
+    transform: translateX(-100vw);
+  }
+  
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+  .scrollText span {
+    font-size: 2.5em;
+    margin: 0 40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .scrollText span {
+    font-size: 1.8em;
+    margin: 0 30px;
+  }
+}
+
+
+
+
+
+
+
+.subscribeSection {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.subscribeSection h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.subscribeSection p {
+  color: #5c3b2e;
+  margin-bottom: 25px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form input {
+  width: 300px;
+  padding: 12px;
+  border: 2px solid #5c3b2e;
+  border-radius: 8px;
+  outline: none;
+}
+
+.form button {
+  background-color: #f7981d;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #e3890e;
+}
+
+small {
+  display: block;
+  margin-top: 15px;
+  color: #6c4f3c;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}

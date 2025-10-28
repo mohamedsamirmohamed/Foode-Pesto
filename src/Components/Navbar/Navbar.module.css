@@ -1,0 +1,511 @@
+/* Navbar.module.css (محتوى ملف CSS بالكامل) */
+
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* Main Container */
+.navbarContainer {
+  width: 100%;
+  background-color: #c84a2e; /* Matches the main red color */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  font-family: 'Poppins', sans-serif;
+  position: relative; /* Needed for mobile menu overlay */
+}
+
+/* Top Bar */
+.topBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 40px;
+  gap: 30px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.logo {
+  font-family: 'Pacifico', cursive;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+  padding-bottom: 5px;
+  border-bottom: 3px solid #ffc107;
+  white-space: nowrap;
+}
+
+.searchContainer {
+  flex-grow: 1;
+  max-width: 450px;
+  display: flex;
+  background-color: white;
+  border-radius: 6px;
+  overflow: hidden;
+  border: 1px solid #ccc;
+}
+
+.searchInput {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 10px 15px;
+  font-size: 15px;
+  background: transparent;
+  color: #333;
+}
+
+.searchInput::placeholder {
+  color: #888;
+}
+
+.searchBtn {
+  background-color: #ffc107;
+  border: none;
+  padding: 10px 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333;
+  transition: background-color 0.2s;
+  border-left: 1px solid rgba(0,0,0,0.05);
+}
+
+.searchBtn:hover {
+  background-color: #ffaf07;
+}
+
+.topIcons {
+  display: flex;
+  gap: 25px;
+  align-items: center;
+  white-space: nowrap;
+}
+
+.userBtn,
+.cartBtn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s;
+  position: relative;
+  padding: 5px;
+}
+
+.userBtn:hover,
+.cartBtn:hover {
+  color: #ffc107;
+}
+
+.cartBadge {
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background-color: #ffc107;
+  color: #333;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* Hamburger Icon (visible on mobile) */
+.hamburgerBtn {
+  display: none; /* Hidden by default on desktop */
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+  margin-left: 20px;
+}
+
+/* Bottom Navigation Bar (Desktop Only) */
+.navBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 60px;
+  background-color: #b03d28;
+  position: relative;
+  z-index: 10;
+}
+
+.navLeft {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  height: 100%;
+}
+
+.navItem {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.navLink {
+  color: white;
+  background: none;
+  border: none;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  transition: color 0.2s, background-color 0.2s;
+  font-family: 'Poppins', sans-serif;
+  padding: 0 5px;
+  height: 100%;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: #ffc107;
+}
+
+/* Dropdown (Desktop) */
+.dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: white;
+  min-width: 180px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  overflow: hidden;
+  z-index: 100;
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navItem:hover .dropdown {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.dropdown a {
+  display: block;
+  padding: 12px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s, color 0.2s;
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
+}
+
+.dropdown a:hover {
+  background-color: #f0f0f0;
+  color: #c84a2e;
+}
+
+/* Hotline Section */
+.hotline {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  cursor: default;
+}
+
+.hotlineIcon {
+  font-size: 24px;
+  display: flex;
+  align-items: center;
+  color: #ffc107;
+}
+
+.hotlineInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hotlineLabel {
+  color: #ffc107;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+.hotlineNumber {
+  color: white;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  white-space: nowrap;
+}
+
+/* ==================================== */
+/*           Mobile Menu Styling        */
+/* ==================================== */
+
+.mobileMenuOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.mobileMenuOverlay.open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobileMenu {
+  position: fixed;
+  top: 0;
+  left: 0; /* Starts hidden off-screen to the left */
+  width: 280px; /* Width of the sidebar menu */
+  height: 100%;
+  background-color: #c84a2e; /* Same as main header */
+  color: white;
+  z-index: 999;
+  transform: translateX(-100%); /* Initially hidden */
+  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.3);
+  overflow-y: auto; /* Enable scrolling for long menus */
+}
+
+.mobileMenu.open {
+  transform: translateX(0); /* Slides in from the left */
+}
+
+.mobileMenuHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #b03d28; /* Slightly darker header */
+}
+
+.mobileMenuTitle {
+  font-size: 22px;
+  font-weight: 600;
+}
+
+.closeMenuBtn {
+  background: none;
+  border: none;
+  color: white;
+  cursor: pointer;
+  padding: 5px;
+}
+
+.mobileNavLinks {
+  flex-grow: 1;
+  padding: 10px 0;
+}
+
+.mobileNavLink {
+  display: flex;
+  justify-content: space-between; /* To push arrow icon to the right */
+  align-items: center;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  transition: background-color 0.2s, color 0.2s;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: none; /* For button elements */
+  border: none; /* For button elements */
+  width: 100%; /* For button elements */
+  text-align: left; /* For button elements */
+  cursor: pointer;
+}
+
+.mobileNavLink:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.mobileNavLinkItem {
+  /* Container for main nav link and its sub-dropdown */
+  position: relative; /* If needed for complex positioning */
+}
+
+.mobileSubDropdown {
+  background-color: rgba(255, 255, 255, 0.1); /* Lighter background for sub-items */
+  padding-left: 15px; /* Indent sub-items */
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05); /* Subtle separator */
+  
+  max-height: 0; /* Initially hidden */
+  overflow: hidden; /* Hide overflowing content */
+  opacity: 0; /* Start invisible */
+  visibility: hidden; /* Hide completely */
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out, visibility 0.3s ease-out;
+}
+
+.mobileSubDropdown.open {
+  max-height: 200px; /* Adjust as needed, sufficiently large to show all items */
+  opacity: 1;
+  visibility: visible;
+  transition: max-height 0.5s ease-in, opacity 0.3s ease-in, visibility 0.3s ease-in;
+}
+
+.mobileSubDropdown a {
+  display: block;
+  padding: 12px 20px;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  transition: background-color 0.2s;
+}
+
+.mobileSubDropdown a:hover {
+  background-color: rgba(0, 0, 0, 0.15);
+}
+
+.mobileMenuBottom {
+  padding: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: auto; /* Push to bottom */
+}
+
+.mobileLogin {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: white;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.mobileSelector {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+/* ==================================== */
+/*           Responsive Design          */
+/* ==================================== */
+
+/* Large Desktops / Laptops (993px and up) */
+@media (min-width: 993px) {
+  .topBar {
+    padding: 12px 60px;
+  }
+  .navBar {
+    padding: 0 60px;
+    display: flex; /* Ensure desktop nav is visible */
+  }
+  .hamburgerBtn, .mobileMenu, .mobileMenuOverlay {
+    display: none; /* Ensure mobile elements are hidden on large screens */
+  }
+  .searchContainer {
+    display: flex; /* Ensure desktop search is visible */
+  }
+  .topIcons {
+    display: flex; /* Ensure desktop icons are visible */
+  }
+}
+
+/* Tablets and Mobile Devices (up to 992px) */
+@media (max-width: 992px) {
+  .navBar {
+    display: none; /* Hide desktop bottom nav bar */
+  }
+
+  .topBar {
+    flex-wrap: wrap; /* Allow items to wrap to new lines */
+    justify-content: space-between; /* Space out items */
+    padding: 10px 20px;
+    gap: 15px; /* Adjust gap for smaller screens */
+  }
+
+  .logo {
+    font-size: 28px;
+    order: 1; /* Keep logo first */
+    flex-grow: 0; /* Prevent it from growing */
+    margin-right: 0; /* Reset margin */
+  }
+
+  .topIcons {
+    display: flex; /* NOW VISIBLE: Show user and cart icons */
+    order: 2; /* Position after logo */
+    gap: 15px; /* Smaller gap for mobile icons */
+    margin-left: auto; /* Push icons to the right, before hamburger */
+  }
+
+  .hamburgerBtn {
+    display: block; /* Show hamburger icon */
+    color: white;
+    font-size: 24px;
+    order: 3; /* Position after topIcons */
+    margin-left: 15px; /* Add some space between icons and hamburger */
+  }
+  
+  .searchContainer {
+    display: flex; /* Ensure search bar is visible */
+    order: 4; /* Position after top row elements */
+    flex-basis: 100%; /* Take full width of the container */
+    max-width: none; /* Remove max-width constraint */
+    margin-top: 10px; /* Add some space below the top row */
+  }
+
+  /* Ensure mobile overlay and menu are block when needed */
+  .mobileMenuOverlay.open {
+    display: block; /* Show overlay when menu is open */
+  }
+}
+
+/* Specific adjustments for smaller mobile devices */
+@media (max-width: 480px) {
+  .topBar {
+    padding: 10px 15px;
+  }
+  .logo {
+    font-size: 24px;
+  }
+  .topIcons {
+    gap: 10px; /* Even smaller gap for very small screens */
+  }
+  .hamburgerBtn {
+    margin-left: 10px;
+  }
+  .mobileMenu {
+    width: 100%; /* Full width on very small screens */
+    max-width: 280px; /* But don't exceed desired max width */
+  }
+  .searchContainer {
+    margin-top: 8px; /* Slightly less margin on very small screens */
+  }
+}

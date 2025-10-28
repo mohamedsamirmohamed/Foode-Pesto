@@ -1,0 +1,438 @@
+.cartContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 60px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.title {
+  font-size: 32px;
+  font-weight: 900;
+  color: #5c2e1f;
+  margin: 0;
+  font-family: Georgia, serif;
+}
+
+.shopLink {
+  color: #0066cc;
+  text-decoration: underline;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.shopLink:hover {
+  color: #0052a3;
+}
+
+.mainContent {
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 40px;
+  align-items: start;
+}
+
+.cartItems {
+  background: white;
+}
+
+.cartHeader {
+  display: grid;
+  grid-template-columns: 1fr 150px 150px;
+  gap: 20px;
+  padding-bottom: 16px;
+  border-bottom: 2px solid #d9d9d9;
+  margin-bottom: 20px;
+}
+
+.headerCell {
+  font-weight: 600;
+  color: #333;
+  font-size: 14px;
+}
+
+.emptyCart {
+  text-align: center;
+  padding: 60px 20px;
+}
+
+.emptyCart p {
+  font-size: 18px;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.continueShoppingBtn {
+  display: inline-block;
+  padding: 10px 30px;
+  background-color: #5c2e1f;
+  color: white;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+}
+
+.continueShoppingBtn:hover {
+  background-color: #4a2316;
+}
+
+.itemsList {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.cartItem {
+  display: grid;
+  grid-template-columns: 1fr 150px 150px 30px;
+  gap: 20px;
+  align-items: start;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.cartItem:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.itemProduct {
+  display: flex;
+  gap: 20px;
+}
+
+.productImage {
+  width: 100px;
+  height: 100px;
+  flex-shrink: 0;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #f5f5f5;
+}
+
+.productImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.productInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  flex: 1;
+}
+
+.productName {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.productPrice {
+  font-size: 16px;
+  font-weight: 600;
+  color: #5c2e1f;
+  margin: 0;
+}
+
+.productDetail {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.label {
+  font-weight: 600;
+  color: #333;
+}
+
+.itemQuantity {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.quantityControl {
+  display: flex;
+  align-items: center;
+  background-color: #ffa500;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.quantityBtn {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.quantityBtn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.quantityInput {
+  background-color: #ffa500;
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
+  width: 45px;
+  padding: 6px 0;
+}
+
+.quantityInput:focus {
+  outline: none;
+}
+
+.itemTotal {
+  text-align: right;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.totalPrice {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin: 0;
+}
+
+.pricePerUnit {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+}
+
+.deleteBtn {
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  padding: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.deleteBtn:hover {
+  color: #333;
+}
+
+.sidebar {
+  position: sticky;
+  top: 20px;
+}
+
+.subtotalBox {
+  background-color: #e8dcd1;
+  padding: 30px;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.subtotalTitle {
+  font-size: 24px;
+  font-weight: 900;
+  color: #5c2e1f;
+  margin: 0;
+  font-family: Georgia, serif;
+}
+
+.subtotalLine {
+  height: 3px;
+  background-color: #5c2e1f;
+  margin: -10px 0 0 0;
+}
+
+.freeShippingText {
+  font-size: 13px;
+  color: #666;
+  margin: 0;
+}
+
+.subtotalAmount {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding-top: 10px;
+}
+
+.subtotalAmount span:first-child {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.amount {
+  font-size: 28px;
+  font-weight: 900;
+  color: #5c2e1f;
+}
+
+.instructionsSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}
+
+.instructionsBtn {
+  background: none;
+  border: none;
+  color: #333;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  padding: 12px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-decoration: underline;
+  gap: 8px;
+}
+
+.instructionsBtn:hover {
+  color: #5c2e1f;
+}
+
+.instructionsTextarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #d0c0b0;
+  border-radius: 4px;
+  font-size: 13px;
+  font-family: inherit;
+  resize: vertical;
+  min-height: 80px;
+  margin-top: 10px;
+}
+
+.checkoutBtn {
+  width: 100%;
+  padding: 16px;
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.checkoutBtn:hover {
+  background-color: #333;
+}
+
+.paymentInfo {
+  font-size: 12px;
+  color: #666;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.shopPayLogo {
+  background-color: #6366f1;
+  color: white;
+  padding: 2px 6px;
+  border-radius: 3px;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.paymentMethods {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+}
+
+.shopPayBtn {
+  padding: 12px;
+  background-color: #6366f1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+}
+
+.shopPayBtn:hover {
+  background-color: #4f46e5;
+}
+
+.googlePayBtn {
+  padding: 12px;
+  background-color: #1a1a1a;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  transition: background-color 0.3s;
+}
+
+.googlePayBtn:hover {
+  background-color: #333;
+}
+
+.taxesNote {
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+  text-align: center;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .mainContent {
+    grid-template-columns: 1fr;
+  }
+
+  .cartHeader {
+    grid-template-columns: 1fr 100px 100px;
+  }
+
+  .cartItem {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .itemProduct {
+    grid-column: 1;
+  }
+
+  .itemQuantity,
+  .itemTotal,
+  .deleteBtn {
+    grid-column: 1;
+  }
+
+  .title {
+    font-size: 24px;
+  }
+}

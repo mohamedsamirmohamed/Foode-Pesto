@@ -1,0 +1,226 @@
+/* General page styling */
+.contactPage {
+    font-family: Arial, sans-serif; /* Use a similar font */
+    background-color: #fff; /* White background */
+    padding: 40px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.mainTitle {
+    color: #8B4513; /* SaddleBrown for the title */
+    font-size: 3.5em; /* Large font size */
+    font-weight: bold;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.contentWrapper {
+    display: flex;
+    justify-content: center;
+    width: 90%;
+    max-width: 1200px; /* Adjust as needed */
+    gap: 40px; /* Space between form and map */
+}
+
+/* Form Section Styling */
+.formSection {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding-top: 20px; /* Aligns with the map's top */
+}
+
+.formTitle {
+    color: #8B4513; /* SaddleBrown */
+    font-size: 2.5em; /* Large font size */
+    font-weight: bold;
+    margin-bottom: 10px;
+    line-height: 1.2;
+}
+
+.formDescription {
+    color: #555;
+    font-size: 1em;
+    margin-bottom: 30px;
+    line-height: 1.5;
+}
+
+.contactForm {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Space between input groups */
+}
+
+.inputGroup {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    color: #333;
+    font-size: 0.9em;
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.inputField {
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1em;
+    color: #333;
+}
+
+.inputField::placeholder {
+    color: #999;
+}
+
+.textArea {
+    min-height: 120px; /* Make textarea taller */
+    resize: vertical; /* Allow vertical resizing */
+}
+
+.submitButton {
+    background-color: #FFA500; /* Orange color */
+    color: #fff;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 4px;
+    font-size: 1.1em;
+    font-weight: bold;
+    cursor: pointer;
+    align-self: flex-start; /* Align button to the left */
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+.submitButton:hover {
+    background-color: #FF8C00; /* Darker orange on hover */
+}
+
+/* Map Section Styling */
+.mapSection {
+    flex: 1;
+    position: relative;
+    width: 100%; /* Ensure it takes full width of its flex container */
+    height: 600px; /* Fixed height for the map, adjust as needed */
+    border-radius: 8px; /* Slightly rounded corners for the map container */
+    overflow: hidden; /* Ensures map content respects border-radius */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+}
+
+.mapContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.mapContainer iframe {
+    width: 100%;
+    height: 100%;
+    display: block; /* Remove extra space below iframe */
+}
+
+.mapOverlay {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background-color: #fff;
+    padding: 15px 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    z-index: 10; /* Ensure overlay is above the map */
+    min-width: 200px;
+}
+
+.mapOverlayTitle {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.mapOverlaySubtitle {
+    font-size: 0.9em;
+    color: #777;
+    margin-bottom: 15px;
+}
+
+.mapOverlayActions {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.mapOverlayLink {
+    color: #1a73e8; /* Google Maps link blue */
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+.mapOverlayLink:hover {
+    text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contentWrapper {
+        flex-direction: column;
+        width: 95%;
+    }
+
+    .mainTitle {
+        font-size: 2.8em;
+    }
+
+    .formTitle {
+        font-size: 2em;
+    }
+
+    .mapSection {
+        height: 400px; /* Adjust map height for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .mainTitle {
+        font-size: 2.2em;
+        margin-bottom: 30px;
+    }
+
+    .formTitle {
+        font-size: 1.8em;
+    }
+
+    .formDescription {
+        font-size: 0.9em;
+    }
+
+    .label, .inputField, .submitButton {
+        font-size: 0.9em;
+    }
+
+    .submitButton {
+        padding: 10px 20px;
+    }
+
+    .mapOverlay {
+        top: 10px;
+        left: 10px;
+        padding: 10px 15px;
+    }
+
+    .mapOverlayTitle {
+        font-size: 1em;
+    }
+
+    .mapOverlaySubtitle {
+        font-size: 0.8em;
+    }
+
+    .mapOverlayLink {
+        font-size: 0.8em;
+    }
+}

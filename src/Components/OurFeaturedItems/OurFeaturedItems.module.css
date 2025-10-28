@@ -1,0 +1,136 @@
+/* src/styles/OurFeaturedItems.module.css */
+
+.ourFeaturedItems {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f8f6f2; /* لون الخلفية حسب الصورة */
+}
+
+.sectionTitle {
+  font-family: 'Times New Roman', serif; /* خط مشابه للعنوان */
+  font-size: 3em;
+  color: #5a3e1a; /* لون بني غامق */
+  margin-bottom: 50px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.itemsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 4 أعمدة على الشاشات الكبيرة */
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.itemCard {
+  background-color: #fff;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  overflow: hidden; /* لمنع تجاوز محتوى البطاقة */
+}
+
+.saleBadge {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background-color: #e74c3c; /* لون أحمر للـ sale */
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.itemImageContainer {
+  width: 150px; /* حجم الصورة لتكون دائرية */
+  height: 150px;
+  border-radius: 50%; /* لجعلها دائرية */
+  overflow: hidden;
+  margin-bottom: 20px;
+  border: 1px solid #eee; /* إطار خفيف */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.itemImage {
+  width: 100%; /* تأكد أن الصورة تغطي المساحة الدائرية */
+  height: 100%;
+  object-fit: cover; /* لقص الصورة بشكل مناسب مع الحفاظ على الأبعاد */
+}
+
+.itemName {
+  font-size: 1.3em;
+  color: #333;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.itemPrice {
+  font-size: 1.1em;
+  color: #666;
+  margin-bottom: 20px;
+}
+
+.oldPrice {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 8px;
+  font-size: 0.9em;
+}
+
+.currentPrice {
+  color: #e74c3c; /* لون أحمر للسعر الحالي عند الخصم */
+  font-weight: bold;
+}
+
+.viewProductButton,
+.seeAllProductsButton {
+  background-color: #f7a400; /* لون برتقالي */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1em;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  margin-top: 10px; /* مسافة بين الزرين إذا كانا موجودين */
+}
+
+.viewProductButton:hover,
+.seeAllProductsButton:hover {
+  background-color: #e09400; /* لون برتقالي أغمق عند التحويم */
+}
+
+.seeAllProductsButton {
+  margin-top: 50px;
+  padding: 15px 40px;
+  font-size: 1.1em;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .itemsGrid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* عمودين على الشاشات المتوسطة */
+  }
+
+  .sectionTitle {
+    font-size: 2.5em;
+  }
+}
+
+@media (max-width: 480px) {
+  .itemsGrid {
+    grid-template-columns: 1fr; /* عمود واحد على الشاشات الصغيرة جداً */
+  }
+
+  .sectionTitle {
+    font-size: 2em;
+  }
+}

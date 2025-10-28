@@ -1,0 +1,147 @@
+.container {
+  font-family: Arial, sans-serif; /* Fallback font */
+  padding: 50px 20px;
+  background-color: #f7f3ed; /* Light background similar to the image */
+  text-align: center;
+}
+
+.title {
+  font-family: 'Georgia', serif; /* A font similar to the image's heading */
+  font-size: 2.8em;
+  color: #5c3e2e; /* Dark brown color */
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.description {
+  font-family: 'Arial', sans-serif;
+  font-size: 1em;
+  color: #5c3e2e; /* Dark brown color */
+  margin-bottom: 40px;
+  line-height: 1.5;
+}
+
+.faqList {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.faqItem {
+  background-color: #edebe7; /* Slightly darker than container, off-white */
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.05); /* Very subtle border */
+}
+
+.faqQuestion {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: 20px 25px;
+  background-color: transparent;
+  border: none;
+  font-size: 1.1em;
+  font-weight: normal;
+  color: #5c3e2e; /* Dark brown color */
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+  font-family: 'Arial', sans-serif; /* For the question text */
+}
+
+.faqQuestion:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+}
+
+.icon {
+  font-size: 1.5em;
+  font-weight: lighter;
+  line-height: 1;
+}
+
+.faqAnswer {
+  padding: 15px 25px 20px;
+  font-size: 1em;
+  color: #5c3e2e; /* Dark brown color */
+  text-align: left;
+  line-height: 1.6;
+  background-color: rgba(0, 0, 0, 0.01); /* Very subtle background for the answer */
+  border-top: 1px solid rgba(0, 0, 0, 0.05); /* Subtle separator */
+}
+
+/* Specific styling for the plus/minus icon to match the image */
+.faqQuestion .icon {
+  font-weight: 300; /* Lighter weight for the icon */
+  font-size: 1.6em; /* Slightly larger for visual impact */
+}
+
+
+
+.subscribeSection {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.subscribeSection h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.subscribeSection p {
+  color: #5c3b2e;
+  margin-bottom: 25px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form input {
+  width: 300px;
+  padding: 12px;
+  border: 2px solid #5c3b2e;
+  border-radius: 8px;
+  outline: none;
+}
+
+.form button {
+  background-color: #f7981d;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #e3890e;
+}
+
+small {
+  display: block;
+  margin-top: 15px;
+  color: #6c4f3c;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}

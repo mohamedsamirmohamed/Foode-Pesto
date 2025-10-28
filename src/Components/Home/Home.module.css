@@ -1,0 +1,782 @@
+/*
+  استيراد الخطوط
+  تأكد من إضافة هذا في ملفك العام `index.css` أو في <head> بملف `public/index.html`
+*/
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Roboto:wght@400;500;700&display=swap');
+
+.homeContainer {
+  font-family: 'Roboto', sans-serif;
+  color: #333;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #f7f7f7; /* خلفية خفيفة للمحتوى */
+}
+
+/* Hero Section */
+.heroSection {
+  background-color: #d13217; /* اللون الأحمر البرتقالي */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px;
+  position: relative;
+  overflow: hidden;
+  min-height: 600px;
+}
+
+.heroSection::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 350px;
+  height: 350px;
+  background-size: contain;
+  opacity: 0.2;
+  z-index: 0;
+  transform: rotate(15deg);
+}
+
+.heroContent {
+  color: #fff;
+  text-align: left;
+  max-width: 520px;
+  margin-right: 60px;
+  z-index: 1;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.heroTitle {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 8rem;
+  line-height: 0.9;
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.heroSubtitle {
+  font-size: 1.25rem;
+  margin-bottom: 10px;
+  font-weight: 400;
+}
+
+.heroOffer {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3.8rem;
+  color: #ffda00;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.orderButton {
+  background-color: #ffda00;
+  color: #333;
+  padding: 18px 45px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.3rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.orderButton:hover {
+  background-color: #e6c200;
+  transform: translateY(-2px);
+}
+
+.burgerImageContainer {
+  position: relative;
+  width: 550px;
+  height: 550px;
+  background: url('../Home/perga.webp') no-repeat center center;
+  background-size: contain;
+  z-index: 1;
+  transform: rotate(5deg);
+  filter: drop-shadow(0 15px 15px rgba(0, 0, 0, 0.4));
+}
+
+/* Winter Sale Section */
+.winterSaleSection {
+  background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../Home/R.jpeg') no-repeat center center;
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 60px;
+  min-height: 120px;
+  box-sizing: border-box;
+}
+
+.winterSaleContent {
+  text-align: left;
+}
+
+.winterSaleTitle {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.5rem;
+  color: #f8f8f8;
+  margin-bottom: 5px;
+  letter-spacing: 0.5px;
+  line-height: 1.2;
+}
+
+.winterSaleText {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  margin: 0;
+  font-weight: 400;
+  color: #cccccc;
+}
+
+.winterSaleTimer {
+  display: flex; /* لعرض العناصر جنبًا إلى جنب */
+  align-items: flex-end; /* لمحاذاة العناصر في الأسفل */
+  margin-left: auto; /* لدفع العداد والزر لليمين */
+  gap: 25px; /* مسافة بين كل "رقم + كلمة" */
+}
+
+/* تنسيقات العداد بدون فاصلات */
+.timerItem {
+    display: flex;
+    flex-direction: column; /* لجعل الرقم فوق والكلمة تحت */
+    align-items: center; /* لتوسيط الرقم والكلمة */
+    justify-content: flex-end; /* لضمان أن التسمية تستقر في الأسفل */
+}
+
+.timerNumber {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 2.8rem; /* حجم كبير جداً للأرقام */
+  color: #ffda00; /* لون أصفر */
+  line-height: 1; /* لضمان عدم وجود مسافات إضافية حول الرقم */
+  display: block; /* لجعل الرقم يأخذ سطرًا خاصًا به */
+  text-align: center;
+}
+
+.timerLabel {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem; /* حجم الخط للتسميات (Days, Hrs...) */
+    font-weight: 500;
+    color: #f8f8f8; /* لون أبيض مائل للرمادي الفاتح */
+    text-transform: capitalize;
+    text-align: center;
+    letter-spacing: 0.5px;
+    line-height: 1;
+    margin-top: 5px; /* مسافة صغيرة بين الرقم والتسمية */
+}
+
+.saleEndedText {
+    font-family: 'Bebas Neue', cursive;
+    font-size: 2rem;
+    color: #ffda00;
+    margin-right: 20px; /* مسافة بين النص والزر */
+}
+
+.shopNowButton {
+  background-color: #f7931e; /* لون برتقالي */
+  color: #fff; /* نص أبيض */
+  padding: 15px 35px; /* ضبط حجم الزر ليتطابق مع الصورة */
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1rem; /* حجم الخط للزر */
+  font-weight: 700; /* خط أغمق */
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  text-transform: capitalize; /* "Shop now" */
+  margin-left: 50px; /* مسافة بين العداد والزر */
+}
+
+.shopNowButton:hover {
+  background-color: #e68211; /* لون أغمق قليلاً عند التحويم */
+  transform: translateY(-2px);
+}
+
+/* ********************************************** */
+/* Pesto's Featured Menu Section */
+.featuredMenuSection {
+  text-align: center;
+  padding: 60px 20px; /* مسافة علوية وسفلية للمحتوى */
+  background-color: #f7f7f7; /* خلفية القسم */
+}
+
+.featuredMenuTitle {
+  font-family: 'Bebas Neue', cursive;
+  font-size: 3.5rem; /* حجم الخط لـ "Pesto's Featured Menu" */
+  color: #3f200c; /* لون بني داكن مطابق للصورة */
+  margin-bottom: 50px; /* مسافة تحت العنوان */
+  letter-spacing: 1px;
+}
+
+.menuItemsGrid {
+  display: flex;
+  justify-content: center; /* توسيط العناصر أفقيًا */
+  /* تم إزالة flex-wrap: wrap; لمنع العناصر من النزول لسطر جديد */
+  gap: 40px; /* زيادة المسافة بين عناصر القائمة للحصول على شكل الصورة */
+  max-width: 1400px; /* زيادة العرض الأقصى لاستيعاب 6 عناصر في سطر واحد */
+  margin: 0 auto; /* توسيط الشبكة نفسها */
+}
+
+.menuItem {
+  display: flex;
+  flex-direction: column; /* لجعل الصورة ثم الاسم ثم العدد */
+  align-items: center; /* توسيط المحتوى داخل كل عنصر */
+  flex-shrink: 0; /* منع العناصر من الانكماش */
+  /* استخدام min-width أو width ثابت لكل عنصر لضمان بقائه بجانب بعضها */
+  width: 180px; /* عرض ثابت لكل عنصر لضمان التناسق */
+  text-decoration: none; /* إزالة أي تنسيقات افتراضية */
+  color: inherit; /* وراثة لون النص من الأب */
+  transition: transform 0.3s ease; /* تأثير عند التحويم */
+}
+
+.menuItem:hover {
+  transform: translateY(-5px); /* رفع العنصر قليلاً عند التحويم */
+}
+
+.menuItemImage {
+  width: 150px; /* حجم الصورة لتتناسب مع التصميم */
+  height: 150px; /* ارتفاع الصورة */
+  object-fit: contain; /* للحفاظ على نسبة العرض إلى الارتفاع */
+  margin-bottom: 15px; /* مسافة تحت الصورة */
+}
+
+.menuItemName {
+  font-family: 'Bebas Neue', cursive; /* الخط المطلوب */
+  font-size: 1.5rem; /* حجم خط اسم الفئة */
+  color: #3f200c; /* لون بني داكن مطابق */
+  margin-bottom: 5px; /* مسافة تحت الاسم */
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.menuItemCount {
+  font-family: 'Roboto', sans-serif; /* الخط المطلوب */
+  font-size: 0.95rem; /* حجم خط عدد العناصر */
+  color: #888; /* لون رمادي فاتح مطابق */
+  margin: 0;
+}
+/* ********************************************** */
+
+
+/* Features Section */
+.featuresSection {
+  background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 35px 20px 40px;
+  gap: 30px;
+  flex-wrap: wrap;
+  border-top: 1px solid #e0e0e0;
+}
+
+.featureItem {
+  flex: 0 1 240px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.featureIcon {
+  width: 50px;
+  height: 50px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+.featureTitle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 5px;
+  color: #3f200c;
+}
+
+.featureDescription {
+  font-size: 0.95rem;
+  color: #777;
+  margin: 0;
+  line-height: 1.4;
+}
+
+/* Responsive Design */
+/* في هذا التصميم الجديد، قد تحتاج إلى تعديل أو إزالة بعض قواعد الـ responsive لقسم قائمة الطعام 
+   إذا كنت تريدهم دائمًا بجانب بعضهم البعض حتى في الشاشات الصغيرة.
+   إذا كنت تفضل أن ينزلوا لسطر جديد في الشاشات الصغيرة جدًا، يمكننا إعادة إضافة flex-wrap 
+   في media query محددة. */
+
+@media (max-width: 1200px) {
+  .heroTitle {
+    font-size: 6.5rem;
+  }
+  .heroOffer {
+    font-size: 3.2rem;
+  }
+  .burgerImageContainer {
+    width: 450px;
+    height: 450px;
+  }
+  .winterSaleSection {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+    padding: 25px 30px;
+    text-align: center;
+  }
+  .winterSaleContent {
+    text-align: center;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  .winterSaleTitle {
+    font-size: 2.5rem;
+  }
+  .timerNumber {
+    font-size: 2.5rem;
+  }
+
+  /* ********************************************** */
+  .featuredMenuTitle {
+    font-size: 3rem;
+  }
+  .menuItemsGrid {
+    gap: 30px; /* تقليل الفجوة قليلاً في الشاشات الأصغر قليلاً */
+  }
+  .menuItem {
+    width: 160px; /* تقليل عرض العنصر قليلاً */
+  }
+  .menuItemImage {
+    width: 130px;
+    height: 130px;
+  }
+  .menuItemName {
+    font-size: 1.4rem;
+  }
+  /* ********************************************** */
+
+  .featuresSection {
+    gap: 20px;
+    padding: 30px 15px 35px;
+  }
+  .featureItem {
+    flex: 0 1 200px;
+  }
+  .shopNowButton {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 992px) {
+  .heroSection {
+    flex-direction: column;
+    text-align: center;
+    padding: 50px 20px;
+    min-height: unset;
+  }
+  .heroContent {
+    margin-right: 0;
+    margin-bottom: 50px;
+    max-width: 90%;
+  }
+  .heroTitle {
+    font-size: 5rem;
+  }
+  .heroOffer {
+    font-size: 2.8rem;
+  }
+  .burgerImageContainer {
+    width: 400px;
+    height: 400px;
+  }
+  .heroSection::after {
+    width: 250px;
+    height: 250px;
+  }
+  .winterSaleSection {
+    flex-direction: column;
+    gap: 25px;
+    padding: 20px 25px;
+  }
+  .winterSaleContent {
+    text-align: center;
+  }
+  .winterSaleTitle {
+    font-size: 2.2rem;
+  }
+
+  /* ********************************************** */
+  .featuredMenuTitle {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  .menuItemsGrid {
+    gap: 20px; /* تقليل الفجوة أكثر */
+    max-width: 1000px; /* تقليل العرض الأقصى قليلاً */
+  }
+  .menuItem {
+    width: 140px; /* تقليل عرض العنصر أكثر */
+  }
+  .menuItemImage {
+    width: 110px;
+    height: 110px;
+  }
+  .menuItemName {
+    font-size: 1.3rem;
+  }
+  /* ********************************************** */
+
+  .featuresSection {
+    gap: 25px;
+    padding: 40px 15px;
+  }
+  .featureItem {
+    flex-basis: 48%;
+    min-width: unset;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSection {
+    padding: 40px 15px;
+  }
+  .heroTitle {
+    font-size: 4rem;
+  }
+  .heroSubtitle {
+    font-size: 1.1rem;
+  }
+  .heroOffer {
+    font-size: 2.2rem;
+  }
+  .orderButton {
+    padding: 15px 35px;
+    font-size: 1.1rem;
+  }
+  .burgerImageContainer {
+    width: 300px;
+    height: 300px;
+  }
+  .heroSection::after {
+    width: 200px;
+    height: 200px;
+  }
+  .winterSaleSection {
+    padding: 20px 15px;
+  }
+  .winterSaleTitle {
+    font-size: 1.8rem;
+  }
+  .winterSaleText {
+    font-size: 0.95rem;
+  }
+  .winterSaleTimer {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  .timerItem {
+      width: auto;
+      min-width: 60px;
+  }
+  .timerNumber {
+    font-size: 2.2rem;
+  }
+  .shopNowButton {
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  /* ********************************************** */
+  .featuredMenuSection {
+    /* لإجبار المنتجات على النزول لسطر جديد في الشاشات الصغيرة جدًا */
+    /* يمكننا هنا إعادة استخدام flex-wrap: wrap; أو استخدام Grid Layout */
+    /* للحفاظ عليها جنبًا إلى جنب قدر الإمكان، سنقوم بتقليل الأحجام */
+    padding: 30px 10px; /* تقليل التباعد */
+  }
+  .featuredMenuTitle {
+    font-size: 2rem;
+    margin-bottom: 25px;
+  }
+  .menuItemsGrid {
+    /* هنا قد تضطر العناصر للالتفاف إذا كانت الشاشة ضيقة جدًا */
+    /* أو يمكننا تقليل حجم العناصر أكثر */
+    gap: 10px; /* تقليل الفجوة أكثر */
+    /* يمكن إضافة overflow-x: auto; للسماح بالتمرير الأفقي إذا لم تتسع العناصر */
+    /* overflow-x: auto; 
+    white-space: nowrap; */ /* هذا يجبرهم على سطر واحد ويضيف سكرول */
+  }
+  .menuItem {
+    width: 100px; /* تقليل عرض العنصر ليتناسب */
+  }
+  .menuItemImage {
+    width: 80px;
+    height: 80px;
+    margin-bottom: 8px;
+  }
+  .menuItemName {
+    font-size: 0.9rem;
+  }
+  .menuItemCount {
+    font-size: 0.75rem;
+  }
+  /* ********************************************** */
+
+  .featuresSection {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 30px 10px;
+  }
+  .featureItem {
+    width: 90%;
+    margin-bottom: 10px;
+  }
+  .featureIcon {
+    width: 50px;
+    height: 50px;
+  }
+  .featureTitle {
+    font-size: 1.3rem;
+  }
+  .featureDescription {
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroTitle {
+    font-size: 3rem;
+  }
+  .heroOffer {
+    font-size: 1.8rem;
+  }
+  .burgerImageContainer {
+    width: 250px;
+    height: 250px;
+  }
+  .heroSection::after {
+    width: 150px;
+    height: 150px;
+  }
+  .winterSaleTitle {
+    font-size: 1.6rem;
+  }
+  .timerNumber {
+    font-size: 1.8rem;
+  }
+
+  /* ********************************************** */
+  .featuredMenuTitle {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  .menuItemsGrid {
+    /* في هذا الحجم، قد يكون من الأفضل السماح بالالتفاف أو التمرير الأفقي */
+    flex-wrap: wrap; /* السماح بالالتفاف */
+    gap: 15px; /* مسافة معقولة */
+  }
+  .menuItem {
+    width: 100px; /* يمكن تحديد عرض ثابت أو السماح له بالتكيف */
+  }
+  .menuItemImage {
+    width: 70px;
+    height: 70px;
+  }
+  .menuItemName {
+    font-size: 0.8rem;
+  }
+  .menuItemCount {
+    font-size: 0.7rem;
+  }
+  /* ********************************************** */
+
+  .featureIcon {
+    width: 45px;
+    height: 45px;
+  }
+  .featureTitle {
+    font-size: 1.1rem;
+  }
+  .saleEndedText {
+      font-size: 1.5rem;
+  }
+}
+
+
+
+/* Testimonials.module.css */
+
+.testimonialSection {
+  background-color: #ffffff;
+  padding: 64px 16px;
+}
+
+.testimonialContainer {
+  max-width: 1280px;
+  margin: 0 auto;
+}
+
+.testimonialTitle {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 700;
+  color: #3d2817;
+  margin-bottom: 48px;
+  letter-spacing: -0.5px;
+}
+
+.testimonialGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+  gap: 24px;
+  margin-bottom: 40px;
+}
+
+/* Desktop - 2 columns */
+@media (min-width: 1024px) {
+  .testimonialGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Tablet - 1 column */
+@media (max-width: 768px) {
+  .testimonialGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.testimonialCard {
+  background-color: #f5f1e8;
+  border-radius: 8px;
+  padding: 32px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.testimonialCard:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  transform: translateY(-2px);
+}
+
+.starsContainer {
+  display: flex;
+  gap: 4px;
+  margin-bottom: 16px;
+}
+
+.star {
+  font-size: 20px;
+  color: #fbbf24;
+}
+
+.testimonialText {
+  color: #57453b;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  flex-grow: 1;
+  font-weight: 500;
+}
+
+.authorSection {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.authorAvatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+}
+
+.authorInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.authorName {
+  font-weight: 700;
+  color: #1f2937;
+  font-size: 14px;
+  margin: 0;
+}
+
+.authorTitle {
+  color: #6b7280;
+  font-size: 12px;
+  margin: 2px 0 0 0;
+  font-weight: 500;
+}
+
+/* Animation on load */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.testimonialCard {
+  animation: fadeInUp 0.6s ease-out forwards;
+}
+
+.testimonialCard:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.testimonialCard:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.testimonialCard:nth-child(3) {
+  animation-delay: 0.3s;
+}
+
+.testimonialCard:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+  .testimonialTitle {
+    font-size: 32px;
+    margin-bottom: 32px;
+  }
+
+  .testimonialCard {
+    padding: 20px;
+  }
+
+  .testimonialText {
+    font-size: 13px;
+  }
+
+  .starsContainer {
+    gap: 2px;
+  }
+
+  .star {
+    font-size: 16px;
+  }
+}

@@ -1,0 +1,31 @@
+.scrollButton {
+  position: fixed;
+  bottom: 25px;
+  right: 25px; 
+  background-color: #e63946; 
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 12px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1000;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+
+  /* إضافة الحركة */
+  animation: bounce 1.5s infinite;
+}
+
+.scrollButton:hover {
+  background-color: #c91d2e;
+}
+
+/* تعريف الحركة */
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px); /* فوق 10px */
+  }
+}

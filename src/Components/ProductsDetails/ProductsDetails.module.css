@@ -1,0 +1,942 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+.breadcrumb {
+  color: #666;
+  font-size: 14px;
+  margin-bottom: 30px;
+  cursor: pointer;
+}
+
+.breadcrumb span:first-child,
+.breadcrumb span:last-child {
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.breadcrumb span:first-child:hover {
+  color: #000;
+  text-decoration: underline;
+}
+
+.contentWrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+/* Images Section */
+.imagesSection {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.mainImageWrapper {
+  width: 100%;
+  height: 500px;
+  background: #f5f5f5;
+  border-radius: 12px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mainImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s;
+}
+
+.mainImageWrapper:hover .mainImage {
+  transform: scale(1.05);
+}
+
+.thumbnails {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.thumbnail img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.thumbnail:hover {
+  border-color: #ffa500;
+}
+
+.activeThumbnail {
+  border-color: #ffa500 !important;
+  box-shadow: 0 0 8px rgba(255, 165, 0, 0.3);
+}
+
+/* Details Section */
+.detailsSection {
+  padding: 20px 0;
+}
+
+.productName {
+  font-size: 28px;
+  font-weight: 600;
+  margin: 0 0 15px 0;
+  color: #1a1a1a;
+}
+
+.description {
+  font-size: 14px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.priceSection {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.originalPrice {
+  font-size: 16px;
+  color: #999;
+  text-decoration: line-through;
+}
+
+.unit {
+  font-size: 14px;
+  color: #999;
+}
+
+.shopPayMessage {
+  background: #f9f9f9;
+  padding: 12px 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+  font-size: 13px;
+  color: #666;
+}
+
+.shopLink {
+  color: #0066cc;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+/* Option Groups */
+.optionGroup {
+  margin-bottom: 25px;
+}
+
+.optionLabel {
+  display: block;
+  font-weight: 600;
+  font-size: 14px;
+  margin-bottom: 10px;
+  color: #1a1a1a;
+}
+
+.optionButtons {
+  display: flex;
+  gap: 8px;
+}
+
+.optionBtn {
+  padding: 10px 20px;
+  border: 1px solid #ccc;
+  background: #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s;
+  min-width: 80px;
+  text-align: center;
+}
+
+.optionBtn:hover {
+  border-color: #ffa500;
+  background: #fff9f0;
+}
+
+.optionBtn.active {
+  background: #ffa500;
+  color: #fff;
+  border-color: #ffa500;
+}
+
+/* Quantity Section */
+.quantitySection {
+  margin-bottom: 25px;
+}
+
+.quantityControl {
+  display: flex;
+  align-items: center;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: fit-content;
+}
+
+.quantityControl button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #fff;
+  cursor: pointer;
+  font-size: 18px;
+  color: #666;
+  transition: all 0.3s;
+}
+
+.quantityControl button:hover {
+  background: #f5f5f5;
+}
+
+.quantityControl input {
+  width: 50px;
+  height: 40px;
+  border: none;
+  text-align: center;
+  font-size: 14px;
+  border-left: 1px solid #ccc;
+  border-right: 1px solid #ccc;
+}
+
+.quantityControl input:focus {
+  outline: none;
+}
+
+/* Purchase Type Section */
+.purchaseTypeSection {
+  margin-bottom: 30px;
+  padding: 15px;
+  background: #f9f9f9;
+  border-radius: 6px;
+}
+
+.radioLabel {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  font-size: 14px;
+  position: relative;
+}
+
+.radioLabel:last-child {
+  margin-bottom: 0;
+}
+
+.radioLabel input[type="radio"] {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  margin-top: 2px;
+  flex-shrink: 0;
+  accent-color: #ffa500;
+}
+
+.radioLabel span:first-of-type {
+  font-weight: 500;
+  color: #1a1a1a;
+}
+
+.discountText {
+  font-size: 12px;
+  color: #999;
+  margin: 5px 0 0 0;
+}
+
+.seeDetails {
+  color: #0066cc;
+  text-decoration: underline;
+  cursor: pointer;
+  font-size: 12px;
+  display: block;
+  margin-top: 5px;
+}
+
+/* Buttons Section */
+.buttonsSection {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.addToCartBtn {
+  flex: 1;
+  padding: 14px 20px;
+  background: #ffa500;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.addToCartBtn:hover {
+  background: #ff9200;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+}
+
+.shopPayBtn {
+  flex: 1;
+  padding: 14px 20px;
+  background: #5a67d8;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.shopPayBtn:hover {
+  background: #4c51bf;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(90, 103, 216, 0.3);
+}
+
+/* Store Info */
+.storeInfo {
+  background: #f0f0f0;
+  padding: 20px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.pickupInfo {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 15px;
+}
+
+.checkIcon {
+  font-size: 20px;
+  color: #4caf50;
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.pickupInfo p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.readyTime {
+  color: #666;
+  font-size: 13px !important;
+  margin-top: 5px !important;
+}
+
+.storeInfoBtn {
+  width: 100%;
+  padding: 10px;
+  background: #1a1a1a;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.storeInfoBtn:hover {
+  background: #000;
+}
+
+/* Tax Note */
+.taxNote {
+  font-size: 12px;
+  color: #999;
+  text-align: center;
+  margin: 0;
+}
+
+.notFound {
+  text-align: center;
+  padding: 50px 20px;
+  font-size: 18px;
+  color: #666;
+}
+
+.backBtn {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background: #ffa500;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contentWrapper {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .mainImageWrapper {
+    height: 350px;
+  }
+
+  .productName {
+    font-size: 22px;
+  }
+
+  .price {
+    font-size: 20px;
+  }
+
+  .optionButtons {
+    flex-wrap: wrap;
+  }
+
+  .buttonsSection {
+    flex-direction: column;
+  }
+
+  .thumbnails {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+/* Modal Styles */
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: flex-end;
+  z-index: 1000;
+  animation: slideUp 0.3s ease-in-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.modalContent {
+  background: #c1360d;
+  color: #fff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px 12px 0 0;
+  padding: 30px 20px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUpContent 0.3s ease-in-out;
+}
+
+@keyframes slideUpContent {
+  from {
+    transform: translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  width: 32px;
+  height: 32px;
+  background: #000;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.closeBtn:hover {
+  background: #333;
+}
+
+.modalTitle {
+  font-size: 24px;
+  font-weight: 600;
+  margin: 0 0 10px 0;
+  color: #fff;
+}
+
+.modalSubtitle {
+  font-size: 14px;
+  margin: 0;
+  color: #fff;
+  opacity: 0.95;
+}
+
+.modalDivider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.3);
+  margin: 15px 0;
+}
+
+.modalAddress {
+  font-size: 14px;
+  margin: 0;
+  color: #fff;
+  line-height: 1.6;
+  font-weight: 500;
+}
+
+.modalCity {
+  font-size: 14px;
+  margin: 8px 0 0 0;
+  color: #fff;
+}
+
+.modalPostal {
+  font-size: 14px;
+  margin: 8px 0 0 0;
+  color: #fff;
+}
+
+.modalCountry {
+  font-size: 14px;
+  margin: 8px 0 0 0;
+  color: #fff;
+}
+
+.availabilitySection {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+  margin: 15px 0;
+}
+
+.availabilitySection .checkIcon {
+  color: #4caf50;
+  font-size: 18px;
+  margin-top: 2px;
+  flex-shrink: 0;
+}
+
+.availabilitySection p {
+  font-size: 14px;
+  margin: 0;
+  color: #fff;
+  line-height: 1.5;
+}
+
+/* Shop Pay Modal Styles */
+.shopPayModalContent {
+  background: #fff;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  padding: 30px 20px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUpContent 0.3s ease-in-out;
+}
+
+.shopPayHeader {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+.shopPayIcon {
+  width: 40px;
+  height: 40px;
+  background: #5a67d8;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.shopPayTitle {
+  font-size: 20px;
+  font-weight: 600;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.shopPayBody {
+  padding: 10px 0;
+}
+
+.shopPayDescription {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.6;
+  margin: 0 0 15px 0;
+}
+
+.shopPayFeature {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 15px;
+  align-items: flex-start;
+}
+
+.featureIcon {
+  font-size: 20px;
+  flex-shrink: 0;
+}
+
+.featureText {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.shopPayLegal {
+  font-size: 12px;
+  color: #999;
+  line-height: 1.5;
+  margin: 20px 0;
+}
+
+.shopPayLogos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  padding-top: 15px;
+  border-top: 1px solid #eee;
+}
+
+.affirmLogo {
+  font-size: 14px;
+  font-weight: 600;
+  color: #000;
+}
+
+.shopPayLogo {
+  font-size: 14px;
+  font-weight: 600;
+  color: #5a67d8;
+}
+
+/* أضف هذا في ملف CSS الخاص بك في قسم Cart Modal Styles */
+
+.cartItemRight {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+/* Cart Modal Styles */
+.cartModalContent {
+  background: #fff;
+  width: 100%;
+  max-width: 600px;
+  border-radius: 12px 12px 0 0;
+  padding: 25px 20px;
+  max-height: 90vh;
+  overflow-y: auto;
+  position: relative;
+  animation: slideUpContent 0.3s ease-in-out;
+}
+
+.cartHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.cartTitle {
+  font-size: 22px;
+  font-weight: 600;
+  margin: 0;
+  color: #1a1a1a;
+}
+
+.cartCloseBtn {
+  width: 32px;
+  height: 32px;
+  background: #ffa500;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 24px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.cartCloseBtn:hover {
+  background: #ff9200;
+}
+
+.freeShippingText {
+  font-size: 14px;
+  color: #333;
+  margin: 0;
+  padding-bottom: 15px;
+}
+
+.cartDivider {
+  height: 1px;
+  background: #e0e0e0;
+  margin: 15px 0;
+}
+
+.cartItems {
+  margin: 15px 0;
+}
+
+.cartItem {
+  display: grid;
+  grid-template-columns: 100px 1fr 100px;
+  gap: 15px;
+  padding-bottom: 20px;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+}
+
+.cartItem:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.cartItemImage {
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+  object-fit: cover;
+  background: #f5f5f5;
+}
+
+.cartItemDetails {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.cartItemName {
+  font-size: 16px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #1a1a1a;
+}
+
+.cartItemPrice {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  color: #1a1a1a;
+}
+
+.cartItemSpecs {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+
+.cartItemSubscription {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 4px 0;
+  line-height: 1.4;
+}
+
+.cartItemDiscount {
+  font-size: 12px;
+  color: #666;
+  margin: 0 0 8px 0;
+  line-height: 1.4;
+}
+
+.cartItemTotal {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.cartItemQuantity {
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+  margin: 0;
+  align-self: flex-start;
+  padding-top: 4px;
+}
+
+.cartSummary {
+  margin: 15px 0;
+}
+
+.summaryRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.summaryRow span:last-child {
+  font-weight: 500;
+}
+
+.cartTotal {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  margin-bottom: 15px;
+}
+
+.cartTotal span:first-child {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.totalAmount {
+  font-size: 24px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.cartTaxNote {
+  font-size: 12px;
+  color: #999;
+  margin: 0 0 20px 0;
+}
+
+.cartButtons {
+  display: flex;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.viewCartBtn {
+  flex: 1;
+  padding: 14px 20px;
+  background: #fff;
+  color: #1a1a1a;
+  border: 2px solid #1a1a1a;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.viewCartBtn:hover {
+  background: #f5f5f5;
+}
+
+.checkoutBtn {
+  flex: 1;
+  padding: 14px 20px;
+  background: #ffa500;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.checkoutBtn:hover {
+  background: #ff9200;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(255, 165, 0, 0.3);
+}
+
+.removeBtn {
+  width: 30px;
+  height: 30px;
+  background: #ff4444;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 18px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  margin-top: 10px;
+}
+
+.removeBtn:hover {
+  background: #cc0000;
+  transform: scale(1.1);
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.3);
+}

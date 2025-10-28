@@ -1,0 +1,723 @@
+/* About.module.css */
+
+.aboutContainer {
+  width: 100%;
+  overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+/* Hero Section */
+.heroSection {
+  position: relative;
+  width: 100%;
+  height: 600px; /* Adjust as needed */
+  background-image: url('./page-title-2.jpg'); /* **IMPORTANT: Replace with your actual image path** */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Text color */
+  text-align: center;
+}
+
+.heroOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Adjust opacity for the desired dark overlay */
+  z-index: 1; /* Make sure overlay is behind text but above background */
+}
+
+.restaurantName {
+  position: relative;
+  z-index: 2; /* Ensure text is above overlay */
+  font-family: sans-serif; /* Adjust font as needed */
+  font-size: 1.2rem; /* Adjust size */
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.heroHeadline {
+  position: relative;
+  z-index: 2;
+  font-family: 'Georgia', serif; /* Adjust font to match the image */
+  font-size: 4.5rem; /* Adjust size to match the image */
+  font-weight: bold;
+  line-height: 1.1;
+  text-transform: uppercase;
+  margin: 0;
+  padding: 0 20px; /* Add some horizontal padding */
+}
+
+/* Features Section */
+.featuresSection {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start; /* Align items to the top if descriptions vary */
+  flex-wrap: wrap; /* Allow cards to wrap on smaller screens */
+  padding: 30px 20px; /* Adjust padding as needed */
+  background-color: #f8f8f8; /* Light background for this section */
+  border-top: 1px solid #eee; /* Subtle separator */
+}
+
+.featureCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 250px; /* Adjust card width */
+  margin: 20px; /* Space between cards */
+  padding: 20px;
+  box-sizing: border-box; /* Include padding in width */
+}
+
+.featureIcon {
+  width: 60px; /* Size of the icon container */
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #ccc; /* Border around the icon */
+  border-radius: 50%; /* Make it circular */
+  margin-bottom: 15px;
+  background-color: #f7f7f7; /* Background for the icon circle */
+}
+
+.featureIcon img {
+  width: 40px; /* Size of the actual icon image */
+  height: 40px;
+  object-fit: contain; /* Ensure image fits */
+}
+
+.featureCard:nth-child(1) .featureIcon { border-color: #f4d03f; /* Gold for Premium Material */ }
+.featureCard:nth-child(2) .featureIcon { border-color: #f4d03f; /* Gold for Fast Delivery */ }
+.featureCard:nth-child(3) .featureIcon { border-color: #f4d03f; /* Gold for Timely Delivery */ }
+.featureCard:nth-child(4) .featureIcon { border-color: #f4d03f; /* Gold for Secure Payments */ }
+
+.featureTitle {
+  font-family: sans-serif; /* Adjust font */
+  font-size: 1.1rem; /* Adjust size */
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: #333; /* Darker text */
+}
+
+.featureDescription {
+  font-family: sans-serif; /* Adjust font */
+  font-size: 0.9rem; /* Adjust size */
+  color: #666; /* Lighter text */
+  line-height: 1.4;
+}
+
+/* Pesto's Story Section */
+.pestoStorySection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 80px 40px; /* Adjust padding as needed */
+  background-color: white; /* White background */
+  gap: 60px; /* Space between image and content */
+}
+
+.pestoStoryImageContainer {
+  flex-shrink: 0; /* Prevent image from shrinking */
+  max-width: 450px; /* Max width for the image */
+  width: 100%; /* Ensure it takes available width */
+}
+
+.pestoStoryImage {
+  width: 100%;
+  height: auto;
+  display: block; /* Remove extra space below image */
+}
+
+.pestoStoryContent {
+  max-width: 550px; /* Max width for the text content */
+  text-align: left;
+}
+
+.pestoStoryHeadline {
+  font-family: 'Georgia', serif; /* Adjust font to match the image */
+  font-size: 3rem; /* Adjust size to match the image */
+  color: #8c4c37; /* Brown color from the image */
+  margin-bottom: 25px;
+}
+
+.pestoStoryParagraph {
+  font-family: sans-serif; /* Adjust font */
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #555; /* Dark gray text */
+  margin-bottom: 20px;
+}
+
+.pestoStoryList {
+  list-style: none; /* Remove default bullet points */
+  padding: 0;
+  margin: 0;
+}
+
+.pestoStoryListItem {
+  display: flex;
+  align-items: flex-start; /* Align icon and text at the top */
+  font-family: sans-serif; /* Adjust font */
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.checkmark {
+  width: 20px; /* Size of the checkmark icon */
+  height: 20px;
+  margin-right: 10px;
+  /* You might need to adjust color of the SVG if it's not already brown */
+  filter: invert(34%) sepia(21%) saturate(1005%) hue-rotate(344deg) brightness(97%) contrast(80%); /* To make a brown checkmark */
+}
+
+
+/* Media Queries for responsiveness */
+@media (max-width: 992px) {
+  .pestoStorySection {
+    flex-direction: column; /* Stack image and content vertically */
+    padding: 60px 20px;
+    gap: 40px;
+  }
+
+  .pestoStoryImageContainer {
+    max-width: 80%; /* Adjust width for smaller screens */
+  }
+
+  .pestoStoryContent {
+    max-width: 100%;
+    text-align: center; /* Center text when stacked */
+  }
+
+  .pestoStoryHeadline {
+    font-size: 2.5rem;
+  }
+
+  .pestoStoryListItem {
+      justify-content: center; /* Center list items when content is centered */
+  }
+}
+
+@media (max-width: 768px) {
+  .heroHeadline {
+    font-size: 3rem;
+  }
+
+  .pestoStoryHeadline {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .heroHeadline {
+    font-size: 2.2rem;
+  }
+
+  .pestoStorySection {
+    padding: 40px 15px;
+  }
+
+  .pestoStoryHeadline {
+    font-size: 1.8rem;
+  }
+
+  .pestoStoryParagraph,
+  .pestoStoryListItem {
+    font-size: 0.9rem;
+  }
+}
+
+
+
+/* Gallery Section */
+.gallerySection {
+  background-color: #fcfbf8; /* لون الخلفية الفاتح */
+  padding: 80px 40px; /* مسافة داخلية */
+  text-align: center; /* توسيط النصوص */
+}
+
+.galleryTitle {
+  font-family: 'Georgia', serif; /* نفس خط العنوان الكبير */
+  font-size: 3rem;
+  color: #8c4c37; /* اللون البني من التصميم */
+  margin-bottom: 10px;
+}
+
+.galleryDescription {
+  font-family: sans-serif;
+  font-size: 1rem;
+  color: #555;
+  line-height: 1.6;
+  max-width: 600px; /* تحديد أقصى عرض للوصف */
+  margin: 0 auto 50px auto; /* توسيط الوصف وإضافة مسافة سفلية */
+}
+
+.galleryGrid {
+  display: grid;
+  /* 3 أعمدة متساوية. الصورة الطويلة (1 و 3) هتاخد ارتفاع 2 صف */
+  /* والصورة العريضة (5) هتاخد الـ 3 أعمدة في الصف الأخير */
+  grid-template-columns: repeat(3, 1fr);
+  /* 3 صفوف: الصف الأول والثاني للصور الطويلة والعادية، والصف الثالث للصورة العريضة */
+  grid-template-rows: repeat(2, 250px) auto; /* الصفين الأول والتاني بارتفاع 250px، والصف التالت تلقائي */
+  gap: 20px; /* المسافة بين الصور */
+  max-width: 1200px; /* أقصى عرض للشبكة */
+  margin: 0 auto; /* توسيط الشبكة */
+}
+
+.galleryItem {
+  position: relative;
+  overflow: hidden; /* لإخفاء الجزء الزائد من الصورة وتأثير الهوفر */
+  border-radius: 8px; /* حواف مستديرة للصور */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* ظل خفيف */
+  cursor: pointer; /* لإظهار أن العنصر قابل للتفاعل */
+  /* تأكد أن الصور تملأ الـ item بالكامل */
+  width: 100%;
+  height: 100%;
+}
+
+.galleryItem img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* لملء العنصر مع الحفاظ على نسبة العرض إلى الارتفاع */
+  display: block;
+  transition: transform 0.3s ease-in-out; /* حركة سلسة عند الهوفر */
+}
+
+.galleryItem:hover img {
+  transform: scale(1.05); /* تكبير الصورة قليلاً عند الهوفر */
+}
+
+.galleryOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6); /* خلفية سوداء شبه شفافة */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0; /* مخفي بشكل افتراضي */
+  transition: opacity 0.3s ease-in-out; /* حركة سلسة عند الهوفر */
+  pointer-events: none; /* لتجنب حجب أحداث الماوس عن الصورة */
+  text-align: center; /* لتوسيط النص داخل الـ overlay */
+}
+
+.galleryItem:hover .galleryOverlay {
+  opacity: 1; /* إظهار الـ overlay عند الهوفر */
+}
+
+.productName {
+  color: white;
+  font-family: 'Georgia', serif; /* نفس خط العنوان */
+  font-size: 1.8rem;
+  font-weight: bold;
+  text-align: center;
+  padding: 10px;
+  transform: translateY(20px); /* يبدأ من الأسفل قليلاً */
+  transition: transform 0.3s ease-in-out; /* حركة سلسة عند الهوفر */
+}
+
+.galleryItem:hover .productName {
+  transform: translateY(0); /* يرتفع إلى المنتصف عند الهوفر */
+}
+
+/* Specific grid placements to match the image layout */
+/* الترتيب الدقيق للصور كما في الصورة: */
+
+/* الصورة 1 (اللفائف) */
+.galleryItem:nth-child(1) {
+  grid-column: 1 / 2; /* العمود الأول */
+  grid-row: 1 / 3;    /* الصف الأول والثاني (طويل) */
+}
+
+/* الصورة 2 (الشيف) */
+.galleryItem:nth-child(2) {
+  grid-column: 2 / 3; /* العمود الثاني */
+  grid-row: 1 / 2;    /* الصف الأول (عادي) */
+}
+
+/* الصورة 3 (البيتزا) */
+.galleryItem:nth-child(3) {
+  grid-column: 3 / 4; /* العمود الثالث */
+  grid-row: 1 / 3;    /* الصف الأول والثاني (طويل) */
+}
+
+/* الصورة 4 (التاكو) */
+.galleryItem:nth-child(4) {
+  grid-column: 2 / 3; /* العمود الثاني */
+  grid-row: 2 / 3;    /* الصف الثاني (عادي) */
+}
+
+/* الصورة 5 (الأضلاع والبطاطس) */
+.galleryItem:nth-child(5) {
+  grid-column: 1 / 4; /* من العمود الأول للثالث (تأخذ عرض الشبكة بالكامل) */
+  grid-row: 3 / 4;    /* الصف الثالث */
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+  .galleryGrid {
+    grid-template-columns: repeat(2, 1fr); /* عمودين على الشاشات المتوسطة */
+    grid-template-rows: auto auto auto auto auto; /* 5 صفوف لترتيب أفضل على شاشتين */
+  }
+
+  /* إعادة تعريف أماكن العناصر لترتيب عمودين */
+  .galleryItem:nth-child(1) {
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; /* يصبح عنصر عادي */
+  }
+  .galleryItem:nth-child(2) {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+  }
+  .galleryItem:nth-child(3) {
+    grid-column: 1 / 2;
+    grid-row: 2 / 3; /* ينتقل للصف الثاني */
+  }
+  .galleryItem:nth-child(4) {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+  .galleryItem:nth-child(5) {
+    grid-column: 1 / 3; /* يأخذ العمودين في الصف الثالث */
+    grid-row: 3 / 4;
+  }
+}
+
+@media (max-width: 768px) {
+  .gallerySection {
+    padding: 60px 20px;
+  }
+  .galleryTitle {
+    font-size: 2.5rem;
+  }
+  .productName {
+    font-size: 1.5rem;
+  }
+  .galleryGrid {
+    grid-template-columns: 1fr; /* عمود واحد على الشاشات الصغيرة جداً */
+    grid-template-rows: auto; /* صفوف تلقائية */
+  }
+  .galleryItem:nth-child(1),
+  .galleryItem:nth-child(2),
+  .galleryItem:nth-child(3),
+  .galleryItem:nth-child(4),
+  .galleryItem:nth-child(5) {
+    grid-column: 1 / 2; /* كلهم يأخذون عمود واحد */
+    grid-row: auto; /* وترتيبهم تلقائياً */
+    height: 300px; /* لتحديد ارتفاع معقول للعناصر على الجوال */
+  }
+}
+
+
+
+
+/* -------------------------------------- */
+/* Pesto's Talented Chefs Section - NEW CSS */
+/* -------------------------------------- */
+
+.chefsSection {
+  background-color: #fcfbf8; /* نفس لون خلفية الـ Gallery */
+  padding: 80px 40px;
+  text-align: center;
+}
+
+.chefsTitle {
+  font-family: 'Georgia', serif;
+  font-size: 3rem;
+  color: #8c4c37; /* اللون البني */
+  margin-bottom: 50px; /* مسافة كافية بين العنوان والبطاقات */
+}
+
+.chefCardsContainer {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap; /* تسمح للبطاقات بالنزول لصف جديد في الشاشات الصغيرة */
+  gap: 40px; /* المسافة بين بطاقات الشيفات */
+  max-width: 1200px; /* أقصى عرض للحاوية */
+  margin: 0 auto; /* توسيط الحاوية */
+}
+
+.chefCard {
+  width: 45%; /* كل بطاقة تأخذ تقريبا نصف العرض مع مراعاة الـ gap */
+  max-width: 550px; /* أقصى عرض للبطاقة */
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08); /* ظل أعمق قليلاً */
+  overflow: hidden; /* لضمان أن الـ border-radius يعمل على الصورة أيضاً */
+  text-align: left; /* جعل النص داخل البطاقة يبدأ من اليسار */
+  position: relative; /* لتحديد موقع الـ info box */
+}
+
+.chefImageContainer {
+  width: 100%;
+  height: 350px; /* ارتفاع ثابت للصورة */
+  overflow: hidden; /* لضمان أن الصورة لا تتجاوز حدودها */
+}
+
+.chefImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* لملء المساحة مع الحفاظ على نسبة الأبعاد */
+  display: block;
+}
+
+.chefInfoBox {
+  position: absolute; /* وضع الـ info box فوق الصورة */
+  bottom: 0; /* يبدأ من أسفل البطاقة */
+  left: 0;
+  width: 100%;
+  background-color: rgba(255, 255, 255, 0.9); /* خلفية بيضاء شبه شفافة */
+  padding: 30px; /* مسافة داخلية للـ info box */
+  box-sizing: border-box; /* لضمان أن الـ padding لا يزيد العرض */
+  border-bottom-left-radius: 10px; /* حواف مستديرة سفلية لتتناسب مع البطاقة */
+  border-bottom-right-radius: 10px;
+}
+
+.chefName {
+  font-family: 'Georgia', serif;
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.chefRole {
+  font-family: sans-serif;
+  font-size: 0.9rem;
+  color: #8c4c37; /* اللون البني */
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.chefDescription {
+  font-family: sans-serif;
+  font-size: 0.95rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+/* Responsive adjustments for Chefs Section */
+@media (max-width: 1200px) {
+  .chefCard {
+    width: 48%; /* Adjust width slightly for smaller gaps */
+  }
+}
+
+@media (max-width: 992px) {
+  .chefsSection {
+    padding: 60px 20px;
+  }
+  .chefsTitle {
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+  }
+  .chefCardsContainer {
+    flex-direction: column; /* Stack cards vertically on medium screens */
+    align-items: center; /* Center stacked cards */
+  }
+  .chefCard {
+    width: 80%; /* Make cards wider when stacked */
+    max-width: 450px; /* Limit max width even when stacked */
+  }
+  .chefImageContainer {
+    height: 300px; /* Adjust image height */
+  }
+  .chefInfoBox {
+    padding: 25px;
+  }
+  .chefName {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .chefsTitle {
+    font-size: 2rem;
+  }
+  .chefCard {
+    width: 95%; /* Almost full width on small screens */
+  }
+  .chefImageContainer {
+    height: 250px; /* Further adjust image height */
+  }
+  .chefInfoBox {
+    padding: 20px;
+  }
+  .chefName {
+    font-size: 1.4rem;
+  }
+  .chefRole {
+    font-size: 0.8rem;
+  }
+  .chefDescription {
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .chefsSection {
+    padding: 40px 15px;
+  }
+  .chefsTitle {
+    font-size: 1.8rem;
+    margin-bottom: 30px;
+  }
+  .chefCard {
+    width: 100%; /* Full width on extra small screens */
+  }
+  .chefImageContainer {
+    height: 200px; /* Smaller image height */
+  }
+  .chefInfoBox {
+    padding: 15px;
+  }
+  .chefName {
+    font-size: 1.2rem;
+  }
+  .chefRole {
+    font-size: 0.75rem;
+  }
+  .chefDescription {
+    font-size: 0.8rem;
+  }
+}
+
+
+
+
+.aboutSection {
+  text-align: center;
+  padding: 50px 20px;
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff;
+  color: #3c1c00;
+}
+
+.title {
+  font-size: 36px;
+  font-weight: 800;
+  margin-bottom: 40px;
+}
+
+.cardsContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+}
+
+.card {
+  width: 320px;
+  background-color: #f8f3ef;
+  border-radius: 10px;
+  overflow: hidden;
+  text-align: left;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.cardContent {
+  padding: 20px;
+}
+
+.cardContent h3 {
+  color: #3c1c00;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.cardContent p {
+  color: #5c3b2e;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.info p {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #5c3b2e;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.subscribeSection {
+  margin-top: 60px;
+  text-align: center;
+}
+
+.subscribeSection h2 {
+  font-size: 32px;
+  font-weight: 800;
+  margin-bottom: 10px;
+}
+
+.subscribeSection p {
+  color: #5c3b2e;
+  margin-bottom: 25px;
+}
+
+.form {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.form input {
+  width: 300px;
+  padding: 12px;
+  border: 2px solid #5c3b2e;
+  border-radius: 8px;
+  outline: none;
+}
+
+.form button {
+  background-color: #f7981d;
+  color: #fff;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s;
+}
+
+.form button:hover {
+  background-color: #e3890e;
+}
+
+small {
+  display: block;
+  margin-top: 15px;
+  color: #6c4f3c;
+  font-size: 13px;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .cardsContainer {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card {
+    width: 90%;
+  }
+}
+
