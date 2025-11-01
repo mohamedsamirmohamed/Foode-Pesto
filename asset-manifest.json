@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/Foode-Pesto/static/css/main.fd02f88e.css",
-    "main.js": "/Foode-Pesto/static/js/main.4bb64cdc.js",
+    "main.js": "/Foode-Pesto/static/js/main.2d826044.js",
     "static/js/453.bdb5fcc2.chunk.js": "/Foode-Pesto/static/js/453.bdb5fcc2.chunk.js",
     "static/media/Spicy-Baked-Chicken-Wings-Recipe-12.webp": "/Foode-Pesto/static/media/Spicy-Baked-Chicken-Wings-Recipe-12.b4fb24f9142ba7ca8c34.webp",
     "static/media/Mint Mojito.jpeg": "/Foode-Pesto/static/media/Mint Mojito.ca48d9cda544e957f2d7.jpeg",
@@ -72,11 +72,11 @@
     "static/media/clock.svg": "/Foode-Pesto/static/media/clock.d762a78135b04cdceb222f86b5e0a532.svg",
     "index.html": "/Foode-Pesto/index.html",
     "main.fd02f88e.css.map": "/Foode-Pesto/static/css/main.fd02f88e.css.map",
-    "main.4bb64cdc.js.map": "/Foode-Pesto/static/js/main.4bb64cdc.js.map",
+    "main.2d826044.js.map": "/Foode-Pesto/static/js/main.2d826044.js.map",
     "453.bdb5fcc2.chunk.js.map": "/Foode-Pesto/static/js/453.bdb5fcc2.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fd02f88e.css",
-    "static/js/main.4bb64cdc.js"
+    "static/js/main.2d826044.js"
   ]
 }
